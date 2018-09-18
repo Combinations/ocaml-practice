@@ -1,0 +1,15 @@
+opam-version: "1.2"
+name: "simplehttp"
+version: "~unknown"
+maintainer: "James <jamesleahy314@gmail.com>"
+authors: "James <jamesleahy314@gmail.com>"
+license: ""
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "simplehttp"]
+depends: [
+  "ocamlfind" {build}
+]
